@@ -113,6 +113,8 @@ npm run release
 
 ### Crear y moverse a otra rama
 
+**BORRAR RAMA ENLACES Y REPETIR PROCESO**
+
 ```bash
 git add *
 git commit -m 'feat: previo a crear rama'
@@ -129,8 +131,16 @@ git add *
 git commit -m 'feat: enlaces de interés'
 ```
 
+### Integrar los cambios
+
 > Hay un corriente propiciada por BLM para cambiar master por main
 
 ## Integración remota
+
+### Crear repositorio remoto
+
+### Enviar cambios
+
+### Obtener cambios
 
 ## Gestión de conflictos
