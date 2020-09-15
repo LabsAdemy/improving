@@ -169,6 +169,7 @@ git push origin master # alias rama
 git fetch origin # obtener estado de todas las ramas
 git commit -am 'feat: previo merge'
 git merge origin/mater
+git pull
 ```
 
 ## Gestión de conflictos
