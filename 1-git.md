@@ -185,11 +185,20 @@ git pull
 
 ```bash
 # crear fichero time.md y agregarlo
-
+it commit -am 'feat: fichero time iniciado'
+git commit -am 'feat: fichero time cambiado'
+git commit -am 'feat: fichero time re cambiado'
+git commit -am 'docs: time travel'
 ```
 
 ```bash
+# ver historial
 git log master --oneline # para ver acciones https://devhints.io/git-log
+# viajar por el tiempo sin intervenir
+git checkout a2352e4
+git checkout 010f707
+# volver al presente
+git checkout master
 ```
 
 ### Con el remoto
