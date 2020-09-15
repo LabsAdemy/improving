@@ -113,8 +113,6 @@ npm run release
 
 ### Crear y moverse a otra rama
 
-**BORRAR RAMA ENLACES Y REPETIR PROCESO**
-
 ```bash
 git add *
 git commit -m 'feat: previo a crear rama'
@@ -136,14 +134,41 @@ git commit -am 'feat: previo a volver a master'
 
 ### Integrar los cambios
 
+```bash
+git checkout master
+git merge enlaces
+```
+
+### Borrar ramas
+
+```bash
+git branch -d enlaces
+```
+
 > Hay un corriente promovida por BLM para cambiar master por main
 
 ## Integración remota
 
-### Crear repositorio remoto
+> Se suele usar el alias origin
+
+### Agregar repositorio remoto
+
+```bash
+git remote add origin https://github.com/LabsAdemy/improving.git # alias url
+```
 
 ### Enviar cambios
 
+```bash
+git push origin master # alias rama
+```
+
 ### Obtener cambios
+
+```bash
+git fetch origin # obtener estado de todas las ramas
+git commit -am 'feat: previo merge'
+git merge origin/mater
+```
 
 ## Gestión de conflictos
