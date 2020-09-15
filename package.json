@@ -4,12 +4,12 @@
   "description": "curso de buenas prácticas",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "standard-version"
   },
   "author": "Alberto Basalo",
   "license": "ISC",
   "devDependencies": {
-    "standard-version": "^9.0.0",
-    "release": "standard-version"
+    "standard-version": "^9.0.0"
   }
 }
