@@ -130,6 +130,8 @@ git checkout enlaces # cambio de rama
 # Crear fichero de enlaces.md
 git add *
 git commit -m 'feat: enlaces de interés'
+# realizar cambios
+git commit -am 'feat: previo a volver a master'
 ```
 
 ### Integrar los cambios
