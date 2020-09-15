@@ -59,6 +59,50 @@ logs/
 ### Cometer, comprometer, guardar los cambios
 
 ```bash
-git commit -m "feat: primeros pasos"
-git status
+git commit -m "feat: primeros pasos" # Guardar cambio con un mensaje que indique propósito
+git log # ver historial de cambios comprometidos
+git show curso.md # ver cambios de un fichero
 ```
+> Cada commit tiene un identificador único
+
+```bash
+git rev-parse HEAD # Obtenr id del útlimo commit
+```
+
+### Convenio de Mensajes
+
+[conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
+
+
+fix: Para arreglos de errores (avanza versión patch) #issueID
+
+feat: Para agregar funcionalidad (avanza versión minor) #issueID
+
+fix|feat!: Cambios rupturistas (avanza versión major) #issueID
+
+refactor: Cambios internos que no afectan al uso
+
+docs: documentación de soporte
+
+test: pruebas
+
+chore : Para cambios en editor o configuración
+
+`pacakge.json`
+```json
+{
+  "scripts": {
+    "release": "standard-version"
+  }
+}
+```
+
+```
+npm init
+npm i --save-dev standard-version
+git add *
+git commit -m 'chore: add standard version to commits'
+npm run release
+```
+
+> Genera un CHANGELOG.md y etiqueta los commits
