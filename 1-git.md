@@ -106,3 +106,19 @@ npm run release
 ```
 
 > Genera un CHANGELOG.md y etiqueta los commits
+
+
+## Ramas
+
+
+```bash
+git add *
+git commit -m 'feat: previo a crear rama'
+git branch # lista de ramas
+git branch enlaces
+```
+> Hay un corriente propiciada por BLM para cambiar master por main
+
+## Integración remota
+
+## Gestión de conflictos
