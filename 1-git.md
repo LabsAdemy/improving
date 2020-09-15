@@ -111,12 +111,24 @@ npm run release
 ## Ramas
 
 
+### Crear y moverse a otra rama
+
 ```bash
 git add *
 git commit -m 'feat: previo a crear rama'
 git branch # lista de ramas
-git branch enlaces
+git branch enlaces # crea la rama, pero NO se cambia
+git checkout enlaces # cambio de rama
 ```
+
+### Realizar cambios
+
+```bash
+# Crear fichero de enlaces.md
+git add *
+git commit -m 'feat: enlaces de interés'
+```
+
 > Hay un corriente propiciada por BLM para cambiar master por main
 
 ## Integración remota
