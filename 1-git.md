@@ -66,7 +66,7 @@ git show curso.md # ver cambios de un fichero
 > Cada commit tiene un identificador único
 
 ```bash
-git rev-parse HEAD # Obtenr id del útlimo commit
+git rev-parse HEAD # Obtener id del útlimo commit
 ```
 
 ### Convenio de Mensajes
@@ -176,6 +176,20 @@ git pull
 git add *
 git commit -m 'feat: sin especificar origen remoto'
 git push
+git pull
 ```
 
-## Gestión de conflictos
+## Gestión de problemas
+
+### En local
+
+```bash
+# crear fichero time.md y agregarlo
+
+```
+
+```bash
+git log master --oneline # para ver acciones https://devhints.io/git-log
+```
+
+### Con el remoto
