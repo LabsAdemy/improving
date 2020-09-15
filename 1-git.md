@@ -166,10 +166,16 @@ git push origin master # alias rama
 ### Obtener cambios
 
 ```bash
-git fetch origin # obtener estado de todas las ramas
-git commit -am 'feat: previo merge'
-git merge origin/mater
+git commit -am 'feat: previo pull'
+git pull origin mater
+```
+
+```bash
+git push -u origin master
 git pull
+git add *
+git commit -m 'feat: sin especificar origen remoto'
+git push
 ```
 
 ## Gestión de conflictos
