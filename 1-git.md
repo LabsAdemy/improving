@@ -201,4 +201,11 @@ git checkout 010f707
 git checkout master
 ```
 
+### Cambiando la historia
+
+```bash
+# cambiar time
+git commit -am 'docs: un buen cambio'
+```
+
 ### Con el remoto
