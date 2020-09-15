@@ -205,7 +205,14 @@ git checkout master
 
 ```bash
 # cambiar time
-git commit -am 'docs: un buen cambio'
+git commit -am 'feat: un buen cambio'
+# meter un mal cambio
+git commit -am 'feat: un muy mal cambio'
+# buscar
+git log master --oneline
+# resetear hacia atrás, perdiendo los siguientes cambios
+git reset --hard 5b4eb89
+git commit -am 'docs: cambiando la historia en local'
 ```
 
 ### Con el remoto
