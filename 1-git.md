@@ -335,3 +335,29 @@ Normalmente la otra rama es el origen remoto. De esta forma lo cambios que aport
 > Esto todo sucede en tu rama. No haces nada al remoto.
 
 Después toca revisar conflictos, errores, tests... y ya será momento de hacer le merge.
+
+
+## Workflows
+
+Maneras de trabajar en equipo
+
+### git Flow
+
+La más común. Propiciada por gitHub pero usable en cualquiera
+
+#### Tres + N ramas
+
+- **master**: Código que está desplegado en producción
+- **develop**: Código que será desplegado en la próxima releas
+- **hotfix**: Código con cambios urgentes desde producción
+- **feature_name**: Una rama para cada funcionalidad de las nuevas versiones
+
+
+## Consejos finales
+
+- Convenio de mensajes en commits
+- Muchos commits pequeños
+- Convenio de nombres en ramas
+- Merges frecuentes
+- Testing antes de push
+- Refactor en commits específicos
