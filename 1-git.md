@@ -59,11 +59,11 @@ logs/
 ### Cometer, comprometer, guardar los cambios
 
 ```bash
-git commit -m "feat: primeros pasos" # Guardar cambio con un mensaje que indique propósito
+git commit -m "feat: primeros pasos" # Guardar cambio con un propósito
 git log # ver historial de cambios comprometidos
 git show curso.md # ver cambios de un fichero
 ```
-> Cada commit tiene un identificador único
+> Cada _commit_ tiene un identificador único
 
 ```bash
 git rev-parse HEAD # Obtener id del útlimo commit
@@ -74,19 +74,21 @@ git rev-parse HEAD # Obtener id del útlimo commit
 [conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
 
 
-fix: Para arreglos de errores (avanza versión patch) #issueID
+- fix: Para arreglos de errores (avanza versión patch) #issueID
 
-feat: Para agregar funcionalidad (avanza versión minor) #issueID
+- feat: Para agregar funcionalidad (avanza versión minor) #issueID
 
-fix|feat!: Cambios rupturistas (avanza versión major) #issueID
+- fix|feat!: Cambios rupturistas (avanza versión major) #issueID
 
-refactor: Cambios internos que no afectan al uso
+- refactor: Cambios internos que no afectan al uso
 
-docs: documentación de soporte
+- docs: documentación de soporte
 
-test: pruebas
+- test: pruebas
 
-chore : Para cambios en editor o configuración
+- chore : Para cambios en editor o configuración
+
+#### Change log
 
 `pacakge.json`
 ```json
@@ -97,7 +99,7 @@ chore : Para cambios en editor o configuración
 }
 ```
 
-```
+```bash
 npm init
 npm i --save-dev standard-version
 git add *
@@ -135,8 +137,8 @@ git commit -am 'feat: previo a volver a master'
 ### Integrar los cambios
 
 ```bash
-git checkout master
-git merge enlaces
+git checkout master # cambiar a la rama master
+git merge enlaces # mezclar los cambios de la otra rama
 ```
 
 ### Borrar ramas
@@ -145,17 +147,18 @@ git merge enlaces
 git branch -d enlaces
 ```
 
-> Hay un corriente promovida por BLM para cambiar master por main
+> Hay un corriente promovida por BLM para cambiar _master_ por _main_
 
 ## Integración remota
 
-> Se suele usar el alias origin
 
 ### Agregar repositorio remoto
 
 ```bash
 git remote add origin https://github.com/LabsAdemy/improving.git # alias url
 ```
+
+> Se suele usar el alias _origin_
 
 ### Enviar cambios
 
@@ -166,13 +169,13 @@ git push origin master # alias rama
 ### Obtener cambios
 
 ```bash
-git commit -am 'feat: previo pull'
+git commit -am 'feat: previo pull' # siempre un commit previo
 git pull origin mater
 ```
 
 ```bash
-git push -u origin master
-git pull
+git push -u origin master # -u asigna el _upstream_ por defecto
+git pull # comprobar novedades sin alias ni rama
 git add *
 git commit -m 'feat: sin especificar origen remoto'
 git push
@@ -181,11 +184,16 @@ git pull
 
 ## Gestión de problemas
 
-### En local
+Hay dos tipos de problemas:
+
+- Querer volver a una versión anterior
+- Conflictos en las mezclas
+
+### Viajar por el tiempo local
 
 ```bash
 # crear fichero time.md y agregarlo
-it commit -am 'feat: fichero time iniciado'
+git commit -am 'feat: fichero time iniciado'
 git commit -am 'feat: fichero time cambiado'
 git commit -am 'feat: fichero time re cambiado'
 git commit -am 'docs: time travel'
@@ -193,7 +201,7 @@ git commit -am 'docs: time travel'
 
 ```bash
 # ver historial
-git log master --oneline # para ver acciones https://devhints.io/git-log
+git log master --oneline # para ver acciones
 # viajar por el tiempo sin intervenir
 git checkout a2352e4
 git checkout 010f707
@@ -216,3 +224,114 @@ git commit -am 'docs: cambiando la historia en local'
 ```
 
 ### Con el remoto
+
+Viajar en el tiempo esencialmente es lo mismo.
+
+- 1 Primero descargas _pull_ la rama que quieras.
+
+- 2 Después te mueves por sus _commits_
+
+- 3 Si cambias algo será en local.
+
+- 4 Si todo queda arreglado, se sube con _push_.
+
+
+### Conflictos
+
+Se producen al mezclar contenido entre ramas o entre distintos orígenes.
+
+Lo primero es tratar de evitarlos con estos consejos:
+
+- Mezclado frecuente, para reducir la cantidad de cambios a mezclar
+
+- Commits atómicos para arreglar más fácilmente los problemas
+
+
+Pero inevitablemente se acabarán produciendo.
+
+### Resolución de conflictos
+
+Las herramientas puede ayudar, pero al final quedarán caso para resolver manualmente.
+
+Por ejemplo, hemos incorporado un librería de estilos que en la otra rama/origen no se contemplaba:
+
+```html
+<html>
+  <head>
+<<<<<<< HEAD
+    <link rel="stylesheet" href="style.css" />
+=======
+    <!-- no style -->
+>>>>>>> master
+  </head>
+  <body>
+    <h1>Hello,World! Life is great!</h1>
+  </body>
+</html>
+```
+
+La sintaxis es un poco rara. Son **siete** símbolos <, = y >
+
+**<<<<<<<** _Inicio de nuestro cambio_
+
+**=======** _Separador de cambios_
+
+**>>>>>>>** _Fin del cambio externo_
+
+
+Nadie mejor que tú para saber cual es el cambio bueno. Al terminar hay que certificar el cambio , documentarlo, y guardarlo en el origen.
+
+```bash
+git status # nos informa de los conflictos
+git log --merge # indica los commits conflictivos
+git diff # ayuda a ver diferencias de contenido
+# solución manual
+git checkout # puede requerir viaje en el tiempo
+git reset # puede ser necesario descartar nuestros cambios
+git merge --abort # para la mezcla y busca ayuda o estrategia
+# si todo va bien
+git commit -m 'merge: explicación'
+git push
+```
+
+## Utilidades
+
+### Congelar cambios temporales
+
+Si tienes cambios sin comprometer, y necesitas cambiar de rama o de origen... se perderán esos cambios.
+
+La solución es guardarlo de forma temporal.
+
+```bash
+git stash save 'mensaje para rastreo' # guarda cambios pendientes
+git stash aply # aplica (restaura) los cambios
+# si hay muchos cambios puedes ir paso a paso
+git stash list # pila de ficheros congelados
+git stash pop # aplica el primer cambio de la pila
+git stash drop # descarta el primer cambio de la pila
+```
+
+### Modificar último commit
+
+Si hay un pequeño fallo o un olvido no es necesario crear un nuevo _commit_
+
+```bash
+git commit --amend --no-edit # sin modificar el mensaje
+git commit --amend -m 'cambio' # cambiando el mensaje
+```
+
+### Cambiar la base
+
+Es justo el cometido del comando más intimidante _rebase_.
+
+Estando en una rama cualquiera, podemos re ejecutar (como si fuera una grabación) los cambios que hemos hecho... pero partiendo de la base de otra rama.
+
+```bash
+git rebase master # aplica mis cambios a partir del master
+```
+
+Normalmente la otra rama es el origen remoto. De esta forma lo cambios que aportamos se aplican al contenido actual del otro como si se los hubiésemos aplicado uno a uno manualmente ahora.
+
+> Esto todo sucede en tu rama. No haces nada al remoto.
+
+Después toca revisar conflictos, errores, tests... y ya será momento de hacer le merge.

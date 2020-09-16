@@ -4,3 +4,4 @@
 [Buenas prácticas git](https://acompiler.com/git-best-practices/)
 [Recomendaciones y trucos](https://dev.to/jacobherrington/10-git-tricks-to-save-your-time-and-sanity-289h)
 [Tutorial en español](https://dev.to/alexcamachogz/introduccion-a-git-id)
+[Opciones de Git Log](https://devhints.io/git-log)
