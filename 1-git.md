@@ -311,7 +311,7 @@ La solución es guardarlo de forma temporal.
 
 ```bash
 git stash save 'mensaje para rastreo' # guarda cambios pendientes
-git stash aply # aplica (restaura) los cambios
+git stash apply # aplica (restaura) los cambios
 # si hay muchos cambios puedes ir paso a paso
 git stash list # pila de ficheros congelados
 git stash pop # aplica el primer cambio de la pila
