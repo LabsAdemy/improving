@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "release": "standard-version"
+    "release": "standard-version",
+    "deploy": "git push --follow-tags origin master && npm publish"
   },
   "author": "Alberto Basalo",
   "license": "ISC",
