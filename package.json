@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "release": "standard-version",
-    "deploy": "git push --follow-tags origin master && npm publish"
+    "deploy": "git push --follow-tags origin master"
   },
   "author": "Alberto Basalo",
   "license": "ISC",
