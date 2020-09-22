@@ -46,6 +46,8 @@ git diff # ver cambios no incorporados
 :q # para salir
 ```
 
+![git file life](./images/git.life.png)
+
 ### Ignorar ficheros
 
 `.gitignore`
@@ -112,6 +114,7 @@ npm run release
 
 ## Ramas
 
+![git branches](./images/git-branches-merge.png)
 
 ### Crear y moverse a otra rama
 
@@ -151,6 +154,7 @@ git branch -d enlaces
 
 ## Integración remota
 
+![git work flow](./images/git-workflow.png)
 
 ### Agregar repositorio remoto
 
@@ -324,6 +328,8 @@ git commit --amend -m 'cambio' # cambiando el mensaje
 
 Es justo el cometido del comando más intimidante _rebase_.
 
+![git rebase](./images/rebase.gif)
+
 Estando en una rama cualquiera, podemos re ejecutar (como si fuera una grabación) los cambios que hemos hecho... pero partiendo de la base de otra rama.
 
 ```bash
@@ -336,7 +342,6 @@ Normalmente la otra rama es el origen remoto. De esta forma lo cambios que aport
 
 Después toca revisar conflictos, errores, tests... y ya será momento de hacer le merge.
 
-
 ## Workflows
 
 Maneras de trabajar en equipo
@@ -347,10 +352,13 @@ La más común. Propiciada por gitHub pero usable en cualquiera
 
 #### Tres + N ramas
 
+![git flow](./images/gitflow-branching.png)
+
 - **master**: Código que está desplegado en producción
 - **develop**: Código que será desplegado en la próxima releas
 - **hotfix**: Código con cambios urgentes desde producción
 - **feature_name**: Una rama para cada funcionalidad de las nuevas versiones
+- **release** Código desplegable, un paso extra anterior a master
 
 
 ## Consejos finales

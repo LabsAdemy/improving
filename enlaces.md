@@ -6,3 +6,5 @@
 [Tutorial en español](https://dev.to/alexcamachogz/introduccion-a-git-id)
 [Opciones de Git Log](https://devhints.io/git-log)
 [Mensajes de commit](https://dev.to/helderburato/patterns-for-writing-better-git-commit-messages-4ba0)
+[Rebase](https://gist.github.com/leesmith/8441773)
+[How to Use Git Branches](https://www.sitepoint.com/use-git-branches-buddy/)
