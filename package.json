@@ -1,6 +1,6 @@
 {
   "name": "improving",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "curso de buenas prácticas",
   "main": "index.js",
   "scripts": {
