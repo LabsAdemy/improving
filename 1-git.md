@@ -7,6 +7,7 @@ Buenas prácticas con GIT
 ### Configuración
 
 https://gitforwindows.org/
+
 https://git-scm.com/downloads
 
 ```bash
