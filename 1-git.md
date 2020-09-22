@@ -91,6 +91,8 @@ git rev-parse HEAD # Obtener id del útlimo commit
 
 - chore : Para cambios en editor o configuración
 
+- wip(scope): Cambio realizado #issueID
+
 #### Change log
 
 `pacakge.json`
