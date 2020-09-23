@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/LabsAdemy/improving/compare/v1.3.0...v2.0.0) (2020-09-23)
+
+
+### ⚠ BREAKING CHANGES
+
+* closes #1
+
+### Features
+
+* closes [#1](https://github.com/LabsAdemy/improving/issues/1) ([ff7063e](https://github.com/LabsAdemy/improving/commit/ff7063ed36d8315836de5984ddf53a04b00587bb))
+
 ## [1.3.0](https://github.com/LabsAdemy/improving/compare/v1.2.3...v1.3.0) (2020-09-23)
 
 
