@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/LabsAdemy/improving/compare/v1.2.3...v1.3.0) (2020-09-23)
+
+
+### Features
+
+* enlaces visual studio ([8abeeda](https://github.com/LabsAdemy/improving/commit/8abeeda46972509a00240418c51f76ea9206161f))
+
+
+### Bug Fixes
+
+* add wip to commits tags ([31a5dbc](https://github.com/LabsAdemy/improving/commit/31a5dbce176b21fdcff391f65b53501d5a30121b))
+* new line ([0010daf](https://github.com/LabsAdemy/improving/commit/0010daf90166b7607773696bd72b2b009d05f459))
+
 ### [1.2.3](https://github.com/LabsAdemy/improving/compare/v1.2.2...v1.2.3) (2020-09-22)
 
 
