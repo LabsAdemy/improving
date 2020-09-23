@@ -8,3 +8,7 @@
 [Mensajes de commit](https://dev.to/helderburato/patterns-for-writing-better-git-commit-messages-4ba0)
 [Rebase](https://gist.github.com/leesmith/8441773)
 [How to Use Git Branches](https://www.sitepoint.com/use-git-branches-buddy/)
+
+
+[VSCode 66 atajos](https://filisantillan.com/blog/vscode-atajos/)
+[VSCode Extensiones, configuración y personalización](https://filisantillan.com/blog/vscode-extensiones-configuracion/)
