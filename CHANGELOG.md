@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0](https://github.com/LabsAdemy/improving/compare/v2.0.0...v2.1.0) (2020-09-25)
+
+
+### Features
+
+* add cleancode repo link ([1badf9f](https://github.com/LabsAdemy/improving/commit/1badf9f4c9ae122b3d9aa5bf4fd858d15e2b5131))
+
 ## [2.0.0](https://github.com/LabsAdemy/improving/compare/v1.3.0...v2.0.0) (2020-09-23)
 
 
